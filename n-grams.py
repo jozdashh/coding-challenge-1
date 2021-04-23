@@ -24,7 +24,7 @@ def most_frequent_n_gram(text, n):
     ngrams = calculate_n_grams(text,n) # O(N)
     count = dict()
     current_max = 1
-    answer = ''
+    answer = ngrams[0]
     for gram in ngrams: # O(N-n)
         if gram not in count: # O(1) Python dictionary lookups are constant
             count[gram] = 1
